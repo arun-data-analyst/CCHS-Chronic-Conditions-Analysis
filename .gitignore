@@ -11,3 +11,6 @@ venv/
 
 # System files
 .DS_Store
+
+#Working dataset
+CCHS_Labeled_Working_Set.xlsx
