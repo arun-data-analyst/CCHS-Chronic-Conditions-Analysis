@@ -37,30 +37,40 @@ This project performs an in-depth exploratory data analysis (EDA) of the Canadia
 
 ## 🗂️ Repository Structure
 
-Chronic_Conditions_EDA/
+```
+CCHS-Chronic-Conditions-Analysis/
 │
 ├── Chronic_Conditions_Prevalence_EDA.ipynb   # Main Jupyter Notebook with all analysis
 ├── README.md                                 # You are here!
 ├── requirements.txt                          # Required Python libraries
 ├── .gitignore                                # Files for Git to ignore
 │
-└── plots/
-├── National_Level/
-├── Ontario_Level/
-└── Ontario_vs_National/
+└── plots/                                    # Visual outputs
+    ├── National_Level/
+    ├── Ontario_Level/
+    └── Ontario_vs_National/
+```
+
+---
+
+## 📊 Dataset
+
+The dataset used in this project is the **Canadian Community Health Survey (CCHS) 2019-20 microdata**, downloaded from [Statistics Canada](https://www.statcan.gc.ca/).  
+Due to licensing restrictions, the raw dataset is **not included** in this repository. Users are encouraged to obtain the dataset directly from Statistics Canada.
+
 ---
 
 ## 🚀 How to Run
 
-1.  Clone this repository to your local machine.
-2.  Install the necessary packages:
-    ```bash
-    pip install -r requirements.txt
-    ```
-3.  Launch Jupyter Notebook and open the `Chronic_Conditions_Prevalence_EDA.ipynb` file.
-    ```bash
-    jupyter notebook
-    ```
+1. Clone this repository to your local machine.
+2. Install the necessary packages:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Launch Jupyter Notebook and open the `Chronic_Conditions_Prevalence_EDA.ipynb` file:
+   ```bash
+   jupyter notebook
+   ```
 
 ---
 
