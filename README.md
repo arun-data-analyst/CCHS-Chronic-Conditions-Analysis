@@ -30,18 +30,25 @@ This project presents a comprehensive exploratory analysis of the **Canadian Com
 - **Matplotlib** and **Seaborn** for visualisations.
 - **Survey weights & bootstrap replicates** to calculate 95 % confidence intervals.
 - **Measures of association:** Cramér’s V, absolute differences and relative risks (emphasising practical significance over p‑values).
-
+  
 ## 🗼 Sample Visualizations
 
-Below are examples of the charts generated in the notebook. See the `plots/` directory for all outputs.
+This project produces a full set of condition-by-stratifier plots (e.g., hypertension by age, anxiety by income, diabetes by sex).  
+These outputs let you explore how each chronic condition varies across demographic and socioeconomic groups.
 
-![Chronic Conditions by Province](plots/National_Level/ChronicConditions_ByProvince.png)
+Below are two representative examples. For the complete collection, see the [`plots/`](plots) directory, which is organised into:
 
-*Chronic condition prevalence by province—highlighting higher rates in Newfoundland & Labrador and Nova Scotia.*
+- `National_Level/` – National prevalence by stratifiers
+- `Ontario_Level/` – Ontario-only prevalence by stratifiers
+- `Ontario_vs_National/` – Comparative views of Ontario vs. national averages
 
-![Mental vs Physical by Age Group](plots/National_Level/Mental_vs_Physical_ByAgeGroup.png)
+![Example: Hypertension by Age Group](plots/National_Level/High_Blood_Pressure_by_Age_Group.png)
 
-*Comparison of mental and physical health prevalence across age groups.*
+*High blood pressure prevalence by age group — rising sharply with age.*
+
+![Example: Anxiety by Income Group](plots/National_Level/Anxiety_Disorder_by_Income_Group.png)
+
+*Anxiety disorder prevalence by household income group — illustrating socioeconomic disparities.*
 
 ## 📂 Repository Structure
 
