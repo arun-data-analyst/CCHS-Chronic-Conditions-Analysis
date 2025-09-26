@@ -1,79 +1,89 @@
-# 🩺 Chronic Conditions in Canada: An Exploratory Data Analysis
+# Chronic Conditions in Canada: An Exploratory Data Analysis
 
-This project performs an in-depth exploratory data analysis (EDA) of the Canadian Community Health Survey (CCHS) dataset. The goal is to uncover key patterns and insights into the prevalence of major chronic health conditions across Canada, with a special focus on Ontario.
+This project presents a comprehensive exploratory analysis of the **Canadian Community Health Survey (CCHS) 2019–20 micro‑data**.  The goal is to uncover patterns in the prevalence of chronic conditions across Canada and to compare the national picture with a detailed case study of Ontario.
 
----
+## 🔍 What This Project Does
 
-## 🎯 Project Objectives
+* **Variable extraction and weighting :** The analysis selects only the variables needed to answer the research questions (age, sex, income, province and condition status) and applies survey weights and replicate weights to compute representative prevalence estimates.
+* **National EDA :** Summarises the burden of ten chronic conditions, comparing physical vs. mental health, and visualises how prevalence varies by age, sex and income.
+* **Ontario deep‑dive :** Compares Ontario’s prevalence rates to the national average and quantifies internal disparities by age and income.
+* **Visualization & storytelling :** Produces clear charts and tables that highlight a dual burden—age‑related physical conditions in seniors vs. mental health issues in younger adults—and strong socioeconomic and gender gradients【286660805030324†L20-L34】.
 
-* To analyze and visualize the prevalence of various chronic conditions (physical and mental) at a national level.
-* To identify key demographic drivers such as **age, sex, and income**.
-* To conduct a comparative analysis of **Ontario's** health profile against the national average.
-* To synthesize findings into actionable public health insights.
+## ✨ Key Findings
 
----
+### National‑level insights
 
-## 📈 Key Findings
+- **Age is the dominant driver:** 83.7 % of seniors (65+) report at least one chronic condition, compared with 19 % of adolescents.
+- **Dual health challenge:** Physical conditions (hypertension, diabetes) rise sharply with age, while mental health disorders (anxiety, mood disorders) peak in young adults【286660805030324†L20-L34】.
+- **Socioeconomic gradient:** Low‑income groups experience nearly twice the prevalence of many conditions compared with high‑income groups【286660805030324†L24-L29】.
+- **Gender disparities:** Women report higher rates of anxiety, mood and musculoskeletal conditions, whereas men report higher rates of cardiovascular disease【286660805030324†L29-L31】.
 
-### **National-Level Insights**
-* **Dual Health Challenge:** Canada faces a dual burden of chronic disease: age-related physical conditions (like hypertension and diabetes) are most prevalent in older populations, while mental health disorders (anxiety, mood disorders) are most common among younger Canadians.
-* **Socioeconomic Impact:** There is a strong and consistent correlation between lower income and a higher prevalence of nearly every chronic condition.
-* **Gender Disparities:** Women report higher rates of anxiety, mood disorders, and musculoskeletal conditions, while men report higher rates of cardiovascular conditions and diabetes.
+### Ontario vs. national comparison
 
-### **Ontario vs. National Comparison**
-* **Physical Health:** Ontario's prevalence rates for most major physical conditions are **at or slightly below** the Canadian average.
-* **Mental Health:** Ontario shows a **notably higher** prevalence of Anxiety and Mood Disorders compared to the rest of the country, highlighting a key provincial health challenge.
+- **Physical health:** Ontario’s rates for major physical conditions are at or slightly below the Canadian average【286660805030324†L33-L36】.
+- **Mental health:** Anxiety and mood disorders are notably more prevalent in Ontario than nationally【286660805030324†L33-L38】.
+- **Internal disparities matter:** Within Ontario, high blood pressure increases from 0.1 % among adolescents to 52.4 % among seniors, while musculoskeletal conditions affect ~32 % of low‑income groups but only 17 % of high‑income groups【38415751756450†L55-L63】.
 
----
+## 🛠 Tools and Methodology
 
-## 🛠️ Tools and Libraries
+- **Python** with **Pandas** and **NumPy** for data manipulation.
+- **Matplotlib** and **Seaborn** for visualisations.
+- **Survey weights & bootstrap replicates** to calculate 95 % confidence intervals.
+- **Measures of association:** Cramér’s V, absolute differences and relative risks (emphasising practical significance over p‑values).
 
-* **Python:** The core programming language used for the analysis.
-* **Pandas:** For data manipulation and cleaning.
-* **Matplotlib & Seaborn:** For data visualization.
-* **Jupyter Notebook:** As the interactive development environment.
+## 🗼 Sample Visualizations
 
----
+Below are examples of the charts generated in the notebook. See the `plots/` directory for all outputs.
 
-## 🗂️ Repository Structure
+![Chronic Conditions by Province](plots/National_Level/ChronicConditions_ByProvince.png)
+
+*Chronic condition prevalence by province—highlighting higher rates in Newfoundland & Labrador and Nova Scotia.*
+
+![Mental vs Physical by Age Group](plots/National_Level/Mental_vs_Physical_ByAgeGroup.png)
+
+*Comparison of mental and physical health prevalence across age groups.*
+
+## 📋 Repository Structure
 
 ```
-CCHS-Chronic-Conditions-Analysis/
+CCHS-Chronic-Conditions-EDA/
 │
-├── Chronic_Conditions_Prevalence_EDA.ipynb   # Main Jupyter Notebook with all analysis
-├── README.md                                 # You are here!
+├── Chronic_Conditions_Prevalence_EDA.ipynb   # Main Jupyter Notebook
+├── README.md                                 # Project overview (this file)
 ├── requirements.txt                          # Required Python libraries
-├── .gitignore                                # Files for Git to ignore
-│
+├── .gitignore
 └── plots/                                    # Visual outputs
     ├── National_Level/
     ├── Ontario_Level/
     └── Ontario_vs_National/
 ```
 
----
+## 🗓 How to Run
 
-## 📊 Dataset
+1. Obtain the CCHS 2019–20 micro‑data from [Statistics Canada](https://www.statcan.gc.ca/en) (licensing restrictions prevent distribution of the raw data【286660805030324†L70-L77】).
+2. Clone this repository:
 
-The dataset used in this project is the **Canadian Community Health Survey (CCHS) 2019-20 microdata**, downloaded from [Statistics Canada](https://www.statcan.gc.ca/).  
-Due to licensing restrictions, the raw dataset is **not included** in this repository. Users are encouraged to obtain the dataset directly from Statistics Canada.
+```bash
+git clone https://github.com/arun-data-analyst/CCHS-Chronic-Conditions-EDA.git
+cd CCHS-Chronic-Conditions-EDA
+```
 
----
+3. Install the necessary packages:
 
-## 🚀 How to Run
+```bash
+pip install -r requirements.txt
+```
 
-1. Clone this repository to your local machine.
-2. Install the necessary packages:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Launch Jupyter Notebook and open the `Chronic_Conditions_Prevalence_EDA.ipynb` file:
-   ```bash
-   jupyter notebook
-   ```
+4. Launch Jupyter and run the analysis:
 
----
+```bash
+jupyter notebook Chronic_Conditions_Prevalence_EDA.ipynb
+```
 
 ## 👤 Author
 
-**Arun Acharya**
+**Arun Acharya** – *Data Analyst (Ottawa, Canada)*
+
+---
+
+*If you found this analysis useful, feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/arun-acharya-26077a362) or explore my other projects on [GitHub](https://github.com/arun-data-analyst).*
